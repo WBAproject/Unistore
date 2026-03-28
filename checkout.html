@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.cs">
+</head>
+<body>
+  <div class="container">
+    <header class="main-header" >
+        <div class="logo-section">
+            <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_79143.jpg" alt="Unistore Logo">
+            <h1>Unistore</h1>
+        </div>
+        <i class="fas fa-home home-icon"></i>
+    </header>
+    <main class="content">
+        <section class="form-group">
+            <h2 class="section-title">Buyer Information</h2>
+            <div class="input-wrapper">
+                 <div class="input-container">
+                     <label for="user-name">Name</label>
+                     <input type="text" id="user-name" placeholder="">
+                     <i class="fas fa-user icon"></i>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <div class="input-container">
+                    <label for="user-phone">Phone</label>
+                    <input id="user-phone" type="tel"  placeholder="">
+                    <i class="fas fa-mobile-alt icon"></i>
+                </div>
+            </div>
+        </section>
+        <section class="form-group">
+            <h2 class="section-title">Preferred Meeting / Delivery Method</h2>
+            <label class="radio-option">
+                <input type="radio" name="delivery" checked>
+                Delivery by agreement
+            </label>
+            <label class="radio-option">
+                <input type="radio" name="delivery">
+                Pickup from seller
+            </label>
+        </section>
+        <section class="form-group">
+            <h2 class="section-title">Payment Method</h2>
+            <label class="radio-option">
+                <input type="radio" name="payment" checked>
+                Bank transfer
+            </label>
+            <label class="radio-option">
+                <input type="radio" name="payment" checked>
+                Cash on meetup
+            </label>
+        </section>
+
+        <hr class="divider">
+
+        <section class="order-summary">
+            <h2 class="section-title">Order Summary</h2>
+            <p class="total-text">Total: <span>0 SAR</span></p>
+            <button type="submit" id="btn">Send Request</button>
+        </section>
+    </main>
+  </div>
+
+
+</body>
+</html>

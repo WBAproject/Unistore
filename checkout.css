@@ -1,0 +1,143 @@
+/* Sarah Alquraisha ID:2240005283 */
+
+ /* Checkout */
+ *{
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+ }
+
+  body{
+    background:  #efefef;
+	display: block;
+	padding: 0px;
+	justify-content: center;
+	align-items: flex-start;
+	min-height: 100vh;
+	margin: 0;
+}
+ .main-header{
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #233f99;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+ }
+
+ .logo-section{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+ .logo-section img{
+    width: 55px;
+    height: 42px;
+    background-color: white;
+    border-radius: 8px;
+    object-fit: contain;
+    padding: 4px;
+}
+
+ .logo-section h1{
+    color: white;
+    font-size: 24px;
+ }
+
+ .content{
+   padding: 30px;
+   max-width: 500px;
+   margin: 40px auto;
+   border-radius: 12px;
+   background: white;
+   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+ }
+
+ .section-title{
+   color: #233f99;
+   font-size: 1rem;
+   margin-bottom: 15px;
+   margin-top: 20px;
+ }
+
+ .input-wrapper{
+   margin-bottom: 15px
+ }
+
+ .input-wrapper label{
+   font-size: 14px;
+   margin-top: 10px;
+   margin-bottom: 5px;
+   display: block;
+ }
+
+ .input-container{
+    position: relative;
+}
+
+  .input-container input{
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      background: #f9f9f9;
+  }
+
+ .input-container .icon{
+   position: absolute;
+   left: 10px;
+   top: 50%;
+   transform: translateY(-50%);
+   color: #888;
+ }
+
+  .radio-option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #333;
+  }
+
+  .radio-option input{
+    margin-left: 10px;
+    accent-color: #4a90e2;
+  }
+
+ .divider{
+   border: 0;
+   border-top: 1px solid #eee;
+   margin: 25px 0;
+ }
+
+ .total-text{
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 20px;
+ }
+
+  #btn{
+     width: 40%;
+     display: block;
+     margin: 20px auto;
+     margin-top: 10px;
+     padding: 10px 22px;
+     background-color: #233f99;
+     color: white;
+     border: none;
+     border-radius: 20px;
+     font-weight: bold;
+     cursor: pointer;
+     font-family: Arial, sans-serif;
+     transition: 0.3s;
+ }
+
+ #btn:hover{
+     background-color: #1a2f73;
+     transform: scale(1.05);
+ }
