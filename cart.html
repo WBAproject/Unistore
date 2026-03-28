@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="stylecart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="page-container">
+
+        <!-- Header-->
+         <header class="top-header">
+            <div class="logo-box">
+                <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_79143.jpg" alt="Unistore Logo">
+                <h1>Unistore</h1>
+            </div>
+
+            <div class="nav-icons">
+                <a href="Browse Items.html"><i class="fa-solid fa-house"></i></a>
+            </div>
+         </header>
+
+         <!-- Shopping Cart-->
+          <section class="cart-section">
+            <h2>Shopping Cart</h2>
+
+            <div class="cart-box">
+
+             <!-- Item 1 -->   
+                <div class="cart-item">
+                    <img src="https://content.packt.com/_/image/original/B09606/cover_image.jpg?version=1771981135" alt="Programming Book">
+                   
+                    <div class="item-info">
+                        <h3>Programming book</h3>
+                        <p class="item-price">Price 95 SAR</p>
+                        
+                        <div class="item-buttons">
+                            <button class="details-btn">View Details</button>
+                            <button class="remove-btn">Remove Item</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="cart-item">
+                    <img src="https://m.media-amazon.com/images/I/71ZzZef+TiL._AC_SX679_.jpg" alt="Calculator">
+                    
+                    <div class="item-info">
+                        <h3>Calculator</h3>
+                        <p class="item-price">Price: 30 SAR</p>
+
+                        <div class="item-buttons">
+                            <button class="details-btn">View Details</button>
+                            <button class="remove-btn">Remove Item</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                 <div class="pagination">
+                    <button class="page-arrow"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-arrow"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+            </div>
+          </section>
+
+          <!-- Order Summary -->
+           <section class="summary-section">
+            <h2>Order Summary</h2>
+
+            <div class="summary-box">
+                <p>Programming book - 95</p>
+                <p>Calculator - 30</p>
+
+                <h3>Total: 125 SAR</h3>
+
+                <div class="buy-btn-box">
+                    <button class="buy-btn" id="openModal">
+                       <i class="fa-solid fa-credit-card"></i> Buy Now
+                    </button>
+            </div>
+           </section>
+    </div>
+
+    <!-- Modal -->
+     <div class="modal-overlay" id="purchaseModal">
+        <div class="modal-box">
+            <div class="modal-header">
+            <h2>Confirm Purchase</h2>
+            <span class="close-icon" id="closeModal">&times;</span>
+            </div>
+
+            <p class="modal-text">Are you sure you want to complete your order?</p>
+
+            <div class="modal-buttons">
+                <button class="close-btn" id="closeModalBtn">Close</button>
+                <button class="confirm-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    </body>
+    </html>
+
