@@ -70,7 +70,13 @@
      </form>
     </main>
   </div>
-
+ <script>
+    document.getElementById("checkoutForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("successful! Payment")
+      window.location.href = "Homepage1.html";
+      });
+</script>
 
 </body>
 </html>
