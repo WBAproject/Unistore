@@ -17,21 +17,22 @@
                 <a href="Homepage1.html" class="home-icon"></a>
             </div>
     </header>
-    <main class="content">
+    <main class="content"> 
+     <form id="checkoutForm">
         <section class="form-group">
-            <h2 class="section-title">Buyer Information</h2>
-              <form id="signupForm">
+            <h2 class="section-title">Seller Information</h2>
+              
             <div class="input-wrapper">
                  <div class="input-container">
                      <label for="user-name">Name</label>
-                     <input type="text" id="user-name" placeholder="">
+                     <input type="text" id="user-name" value="Amal Ali" readonly placeholder="">
                      <i class="fas fa-user icon"></i>
                 </div>
             </div>
             <div class="input-wrapper">
                 <div class="input-container">
                     <label for="user-phone">Phone</label>
-                    <input id="user-phone" type="tel"  placeholder="">
+                    <input id="user-phone" type="tel" value="0500000000" readonly  placeholder="">
                     <i class="fas fa-mobile-alt icon"></i>
                 </div>
             </div>
@@ -65,7 +66,8 @@
             <h2 class="section-title">Order Summary</h2>
             <p class="total-text">Total: <span>0 SAR</span></p>
             <button type="submit" id="btn">Send Request</button>
-        </section>
+       </section>
+     </form>
     </main>
   </div>
 
