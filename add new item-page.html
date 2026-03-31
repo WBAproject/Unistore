@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>add new item</title>
+        <link rel="stylesheet" href="add new item-page.css">
+    </head>
+ <!--logo,page name-->
+    <body>
+        <div class="header">
+            <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_79143.jpg" class="logo">
+            <h2>ADD NEW ITEM</h2>
+            <nav class="nav-links">
+                <a href="home-page,html"class="home-icon" title="home"></a>
+            </nav>
+        </div>
+        <!--input ,client informtion-->
+        <form>
+            <label>Enter item name</label>
+            <input type="text" placeholder="enter your item name in one line">
+            <label>Description</label>
+            <input type="text" placeholder="new,used,elsss.....">
+            <label>Prise</label>
+            <input type="text" placeholder="the expected price in SAR">
+          <!--select-->
+            <label>Category</label>
+            <select>
+                <option>Books</option>
+                <option>Electronics</option>
+                <option>Study Tools</option>
+                <option>Notes/summary</option>
+
+            </select>
+            <label>Contact Number</label>
+            <div class="phone">
+                <span class="flag">+966</span>
+                <input type="text">
+             <!--radio-->
+            </div>
+            <label>you want to</label>
+            <div class="radio-group">
+                <label><input type="radio" name="type" checked>Sell item</label>
+                <label><input type="radio" name="type" >Rent item</label>
+            </div>
+            <input type="file"id="upload"hidden>
+            <label for="upload" class="upload">Attach a photo for your item</label>
+             
+            <div class="checkbox">
+                <label><input type="checkbox" checked> Save your information for next time</label>
+
+            </div>
+             <button class="publish" type="button">Publish</button>
+            
+ 
+            
+
+        </form>
+    </body>
+</html>
