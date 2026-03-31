@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div class="container">
+   <div class="logo-box">
+            <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_79143.jpg" alt="Unistore Logo">
+            <h1>Unistore</h1>
+   </div>
+   <div class="form-box">
+       <a href="Home-page.html">
+           <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" class="home-icon">
+       </a>
+     <h2>Sign Up</h2>
+     <form id="signupForm">
+
+       <label for="name">Full name</label>
+          <input id="name" type="text" placeholder="Enter your name">
+
+        <label for="phone">Phone number</label>
+          <input id="phone" type="text" placeholder="+996">
+
+
+        <label for="email">Email</label>
+          <input id="email" type="email" placeholder="Enter your email">
+
+
+        <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Enter password">
+
+       <p class="text">Are you?</p>
+       <label class="radio-option">
+                <input type="radio" name="user" checked>
+                Buyer
+       </label>
+       <label class="radio-option">
+                <input type="radio" name="user">
+                Seller
+       </label>
+         <button id="btn">Sign Up</button>
+     </form>
+
+   </div>
+
+</div>
+<script>
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Account created successfully!!")
+      window.location.href = "Home-page.html";
+      });
+</script>
+
+</body>
+</html>
