@@ -36,11 +36,11 @@
 
        <p class="text">Are you?</p>
        <label class="radio-option">
-                <input type="radio" name="user" checked>
+                <input type="radio" name="user" value="buyer" checked>
                 Buyer
        </label>
        <label class="radio-option">
-                <input type="radio" name="user">
+                <input type="radio" name="user" value="seller">
                 Seller
        </label>
          <button id="btn">Sign Up</button>
@@ -49,13 +49,6 @@
    </div>
 
 </div>
-<script>
-    document.getElementById("signupForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-      alert("Account created successfully!!")
-      window.location.href = "Homepage1.html";
-      });
-</script>
-
+<script scr="loginSignup.js"> </script>
 </body>
 </html>
