@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Unistore</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Browse Items.html">Products</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <main class="details-page">
+
+        <section class="details-card">
+
+            <div class="details-image">
+                <img src="https://m.media-amazon.com/images/I/71ZzZef+TiL._AC_SX679_.jpg" alt="Calculator">
+            </div>
+
+            <div class="details-info">
+                <h2>Calculator</h2>
+
+                <p class="price">Price: 30 SAR</p>
+
+                <p><strong>Category:</strong> Study tools</p>
+                <p><strong>Condition:</strong> Used</p>
+                <p class="details-description">You can depend on this calculator for all of your calculations!</p>
+
+                <div class="buttons">
+                    <a href="cart.html" class="view-cart-btn">Back</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Unistore. All rights reserved.</p>
+    </footer>
+
+     <script>
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            
+            let product = {
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+
+        cart.push(product);
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            
+            alert(productName + " has been added to your cart!");
+        }
+    </script>
+</body>
+</html>
