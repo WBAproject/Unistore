@@ -193,22 +193,43 @@
 
     function searchProducts() {
         let searchValue = searchInput.value.toLowerCase().trim();
+        let firstMatch = null;
 
         productCards.forEach(function(card) {
+            card.style.border = "";
+            carrd.style.boxShadow = "";
+            
             let productName = card.querySelector("h3").textContent.toLowerCase();
+ 
+        if (productName.includes(searchValue) && searchValue !== "" && !firstMatch) {
+            firstMatch = card;
+        }
+    });
 
-            if (productName.includes(searchValue)) {
-                card.style.display = "flex";
-            } else {
-                card.style.display = "none";
-            }
+    if (firstMatch) {
+        firstMatch.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
         });
+
+        firstMatch.style.border = "3px solid #233f99";
+        firstMatch.style.boxShadow = "0 0 20px rgba(35, 63, 153, 0.5)";
+
+        setTimeout(function() {
+            firstMatch.style.border = "";
+            firstMatch.style.boxShadow = "";
+        }, 2000);
+
+    } else {
+        alert("Product not found.");
     }
+}
 
+if (searchBtn) {
     searchBtn.addEventListener("click", searchProducts);
-    searchInput.addEventListener("input", searchProducts);
+}
 
-});  
+});
     </script>
 </body>
 </html>
