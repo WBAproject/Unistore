@@ -153,3 +153,7 @@
   border: 2px solid red;
 }
 
+input.input-error {
+  border: 2px solid red;
+  background-color: #fff5f5;
+}
