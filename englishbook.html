@@ -45,8 +45,21 @@
         <p>&copy; 2026 Unistore. All rights reserved.</p>
     </footer>
 
-    
-    
+    <script>
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            
+            let product = {
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(productName + " has been added to your cart!");
+        }
     </script>
 </body>
 </html>
