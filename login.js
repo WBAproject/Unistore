@@ -72,3 +72,20 @@ loginForm.addEventListener('submit', (e) => {
         window.location.href = "Browse Items.html";
     }
 });
+let menuIcon = document.querySelector(".menu-icon");
+let sideMenu = document.querySelector(".menu-side");
+let overlay = document.querySelector(".overlay");
+let searchButton = document.querySelector(".search-btn");
+
+ menuIcon.addEventListener("click",function(){
+ if (sideMenu.style.right ==="0px"){
+    sideMenu.style.right = "-250px";
+    overlay.style.display= "none";}
+ else {
+    sideMenu.style.right ="0px";
+    overlay.style.display= "block";}
+});
+
+    overlay.addEventListener("click",function(){
+    sideMenu.style.right ="-250px";
+    overlay.style.display= "none";});
