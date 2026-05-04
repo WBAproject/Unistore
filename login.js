@@ -1,4 +1,3 @@
-//login page
 const loginForm = document.getElementById('loginForm');
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');
@@ -73,20 +72,33 @@ loginForm.addEventListener('submit', (e) => {
         window.location.href = "Browse Items.html";
     }
 });
-let menuIcon = document.querySelector(".menu-icon");
-let sideMenu = document.querySelector(".menu-side");
-let overlay = document.querySelector(".overlay");
-let searchButton = document.querySelector(".search-btn");
+const menuIcon = document.querySelector(".menu-icon");
+const sideMenu = document.querySelector(".menu-side");
+const overlay = document.querySelector(".overlay");
 
- menuIcon.addEventListener("click",function(){
- if (sideMenu.style.right ==="0px"){
+if (menuIcon && sideMenu && overlay) {
+
+    menuIcon.addEventListener("click", function() {
+        if (sideMenu.style.right === "0px") {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    // Close Menu when clicking the Overlay
+    overlay.addEventListener("click", closeMenu);
+
+} else {
+    console.warn("Navigation Menu elements are missing from this page.");
+}
+
+function openMenu() {
+    sideMenu.style.right = "0px";
+    overlay.style.display = "block";
+}
+
+function closeMenu() {
     sideMenu.style.right = "-250px";
-    overlay.style.display= "none";}
- else {
-    sideMenu.style.right ="0px";
-    overlay.style.display= "block";}
-});
-
-    overlay.addEventListener("click",function(){
-    sideMenu.style.right ="-250px";
-    overlay.style.display= "none";});
+    overlay.style.display = "none";
+}
