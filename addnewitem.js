@@ -1,7 +1,12 @@
-let isLoggedIn = localStorage.getItem("isLoggedIn");
+const userEmail = localStorage.getItem('userEmail');
+const userRole = localStorage.getItem('userRole');
 
-if (isLoggedIn !== "true") {
-    alert("Please log in first");
+
+if (!userEmail || userRole !== 'seller') {
+    
+    // Alert the user (Optional)
+    alert("Access Denied! Only registered sellers can access this page.");
+    
     window.location.href = "login.html";
 }
 function publishItem() {
