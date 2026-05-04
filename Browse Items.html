@@ -138,7 +138,7 @@
 
  </div>
 
- <script>
+<script>
 
  document.addEventListener('DOMContentLoaded', function() {
 
@@ -157,7 +157,9 @@
     counter.textContent = "0";
     
     
-    cartIcon.appendChild(counter);
+    if (cartIcon) {
+        cartIcon.appendChild(counter);
+    }
 
     function updateCartCount() {
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -191,46 +193,65 @@
         });
     });
 
-    function searchProducts() {
-        let searchValue = searchInput.value.toLowerCase().trim();
-        let firstMatch = null;
+  function searchProducts() {
+    let searchValue = searchInput.value.toLowerCase().trim();
+    let found = false;
 
-        productCards.forEach(function(card) {
-            card.style.border = "";
-            carrd.style.boxShadow = "";
-            
-            let productName = card.querySelector("h3").textContent.toLowerCase();
- 
-        if (productName.includes(searchValue) && searchValue !== "" && !firstMatch) {
-            firstMatch = card;
+    productCards.forEach(function(card) {
+        card.style.border = "";
+        card.style.boxShadow = "";
+
+        let productName = card.querySelector("h3").textContent.toLowerCase();
+
+        if (productName.includes(searchValue) && searchValue !== "") {
+            found = true;
+    
+            card.style.border = "3px solid #007BFF";
+            card.style.boxShadow = "0 0 20px rgba(35, 63, 153, 0.5)";
+
         }
-    });
+    });    
 
-    if (firstMatch) {
-        firstMatch.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
+    if (found) {
+        let firstHighlighted = document.querySelector(".product-card[style*='border']");
+        firstHighlighted.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
         });
 
-        firstMatch.style.border = "3px solid #233f99";
-        firstMatch.style.boxShadow = "0 0 20px rgba(35, 63, 153, 0.5)";
 
         setTimeout(function() {
-            firstMatch.style.border = "";
-            firstMatch.style.boxShadow = "";
+            productCards.forEach(function(card) {
+                card.style.border = "";
+                card.style.boxShadow = "";
+            });
+            
         }, 2000);
 
     } else {
         alert("Product not found.");
     }
 }
+let urlParams = new URLSearchParams(window.location.search);
+let searchFormHome = urlParams.get("search");
 
+if (searchFormHome) {
+    searchInput.value = searchFormHome;
+    searchProducts();
+}
 if (searchBtn) {
     searchBtn.addEventListener("click", searchProducts);
 }
 
-});
+if (searchInput) {
+    searchInput.addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+            searchProducts();
+        }
+    });
+}
 
-    </script>
+});
+ </script>
 </body>
 </html>
