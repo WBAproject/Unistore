@@ -1,9 +1,15 @@
-const userEmail = localStorage.getItem("userEmail");
-const isLoggedIn = localStorage.getItem("isLoggedIn");
+document.addEventListener("DOMContentLoaded", function () {
 
+    const userEmail = localStorage.getItem("userEmail");
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
 
-if (!userEmail || isLoggedIn !== "true") {
-    window.location.href = "login.html";
+    if (!userEmail || isLoggedIn !== "true") {
+        alert("You must log in first to access Support page");
+        window.location.replace("login.html");
+        return;
+    }
+
+});
 }
 function publishItem() {
 
