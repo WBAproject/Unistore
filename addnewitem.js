@@ -4,13 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
     if (!userEmail || isLoggedIn !== "true") {
-        alert("You must log in first to access Support page");
+        alert("You must log in first");
         window.location.replace("login.html");
         return;
     }
 
 });
-}
 function publishItem() {
 
     let itemName = document.getElementById("itemName").value;
