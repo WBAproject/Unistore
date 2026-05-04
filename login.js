@@ -65,6 +65,8 @@ loginForm.addEventListener('submit', (e) => {
     if (hasError) return;
 
     console.log("Login Success! Redirecting user role:", userRole);
+    
+    localStorage.setItem("isLoggedIn", "true");
 
     if (userRole === 'seller') {
         window.location.href = "add new item-page.html";
