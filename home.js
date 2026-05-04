@@ -5,7 +5,7 @@ const overlay = document.querySelector(".overlay");
 const categoryCards = document.querySelectorAll(".category-card");
 const searchInput = document.querySelector(".search-box input");
 const searchButton = document.querySelector(".search-btn");
-if (menuIcon) {
+
 menuIcon.addEventListener("click",function(){
 if (sideMenu.style.right ==="0px"){
 sideMenu.style.right = "-250px";
@@ -14,12 +14,12 @@ else {
 sideMenu.style.right ="0px";
 overlay.style.display= "block";}
 });
-}
-if (overlay) {
+
+
 overlay.addEventListener("click",function(){
 sideMenu.style.right ="-250px";
 overlay.style.display= "none";});
-}
+
 categoryCards.forEach(function(card){
 card.addEventListener("click",function(){
 const categoryName = card.querySelector("h3").textContent.trim();
