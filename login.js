@@ -86,7 +86,6 @@ if (menuIcon && sideMenu && overlay) {
         }
     });
 
-    // Close Menu when clicking the Overlay
     overlay.addEventListener("click", closeMenu);
 
 } else {
