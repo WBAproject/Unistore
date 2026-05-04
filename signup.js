@@ -105,7 +105,6 @@ if (menuIcon && sideMenu && overlay) {
     overlay.addEventListener("click", closeMenu);
 
 } else {
-    // This warning appears in the console if elements are missing from the HTML
     console.warn("Navigation Menu elements are missing from this page.");
 }
 
