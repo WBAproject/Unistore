@@ -81,6 +81,8 @@ signupForm.addEventListener('submit', (e) => {
     localStorage.setItem('userEmail', emailValue);
     localStorage.setItem('userPassword', passValue);
     localStorage.setItem('userRole', selectedRole);
+ 
+    localStorage.setItem("isLoggedIn", "true");
 
     if (selectedRole === 'seller') {
         window.location.href = "add new item-page.html";
