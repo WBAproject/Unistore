@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Unistore</title>
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -27,7 +28,23 @@
                 <i class="fa-solid fa-house"></i>
             </a>
         </nav>
+
+    <div class="right-side">
+        <div class="menu-icon"> ☰ </div>
+    </div>       
+         
      </header>
+        
+<div class="overlay" id="overlay"></div>
+
+<div class="menu-side" id="menuside">
+    <a href="login.html">Cart</a>
+    <a href="login.html">Login / Sign Up</a>
+   <a href="index.html">HOME</a>
+    <a href="Browse Items.html">Browse Items</a>
+    <a href="add new item-page.html">Sell / Rent </a>
+    <a href="mailto:unistore@gmail.com">Contact Us | EMAIL </a>
+</div>
 
 <!-- Search -->
 <section class="search-section">
@@ -229,6 +246,25 @@ if (searchBtn) {
     searchBtn.addEventListener("click", searchProducts);
 }
 
+});
+     
+const menuIcon = document.querySelector(".menu-icon");
+const sideMenu = document.querySelector(".menu-side");
+const overlay = document.querySelector(".overlay");
+
+menuIcon.addEventListener("click", function() {
+    if (sideMenu.style.right === "0px") {
+        sideMenu.style.right = "-250px";
+        overlay.style.display = "none";
+    } else {
+        sideMenu.style.right = "0px";
+        overlay.style.display = "block";
+    }
+});
+
+overlay.addEventListener("click", function() {
+    sideMenu.style.right = "-250px";
+    overlay.style.display = "none";
 });
     </script>
 </body>
