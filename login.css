@@ -6,7 +6,7 @@
    font-family: Arial, sans-serif;
 }
  body{
-    background: #efefef;
+    background-color: #efefef;
 	 display: flex;
 	 justify-content: center;
 	 align-items: flex-start;
