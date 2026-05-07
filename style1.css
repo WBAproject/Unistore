@@ -387,3 +387,35 @@ font-size: 18px;
 .menu-side a:hover{
 background-color: #1a2f75;
 }
+
+.footer {
+margin-top: 15px;
+padding: 15px;
+text-align: center;
+font-size: 14px;
+color: #777;
+background-color: white;
+border-radius: 10px;
+}
+
+.footer a{
+display: block;
+margin-top: 8px;
+text-decoration: none;
+color: #233f99;
+font-weight: bold;
+}
+
+.category-title.highlight-category {
+  background-color: #233f99;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(35, 63, 153, 0.8);
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
