@@ -19,8 +19,11 @@ function publishItem() {
     let phone = document.getElementById("phone").value;
     let type = document.querySelector('input[name="type"]:checked').value;
     let saveInfo = document.getElementById("saveInfo").checked;
+    let imageInput = document.getElementById("upload");
+    let imagaFile = imageInput.file[0];
     let isValid = true;
     
+
 
     let e1 = validateItemName(itemName);
     if (e1) { showError("itemName", e1); isValid = false; }
@@ -43,22 +46,39 @@ function publishItem() {
         return;
     }
 
+
     const item = {
         name: itemName,
         description: description,
         price: Number(price),
         category: category,
         phone: phone,
-        type: type
+        type: type,
+        image:""
+    
     };
     
+if (imageFile) {
 
-    let items = JSON.parse(localStorage.getItem("items")) || [];
-    items.push(item);
-    localStorage.setItem("items", JSON.stringify(items));
-    alert("Saved successfully");
-    console.log(items);
-    document.getElementById("itemform").reset();
+    let reader = new FileReader();
+
+    reader.onload = function () {
+
+        item.image = reader.result;
+
+        let items = JSON.parse(localStorage.getItem("items")) || [];
+
+        items.push(item);
+
+        localStorage.setItem("items", JSON.stringify(items));
+
+        alert("Saved successfully");
+
+        document.getElementById("itemform").reset();
+    };
+
+    reader.readAsDataURL(imageFile);
+}
 }
 
 function validateItemName(name) {
@@ -100,4 +120,6 @@ function clearError(id) {
     document.getElementById(id).classList.add("input-valid");
     document.getElementById(id + "error").textContent = "";
 }
+
+   
 
