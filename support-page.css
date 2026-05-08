@@ -26,19 +26,15 @@ body{
     filter: brightness(0) invert(1);
 }
 /*uni logo*/
-.logo-box {
-display: flex;
-align-items: center;
-gap: 10px;
-text-decoration: none;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.logo-box img {
-width: 55px;
-height: 42px;
-background-color: white;
-border-radius: 10px;
-object-fit: cover;
+.logo img {
+    width: 40px;
+    border-radius: 8px;
 }
 
 /*support contener*/
