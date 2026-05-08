@@ -101,8 +101,3 @@ function clearError(id) {
     document.getElementById(id + "error").textContent = "";
 }
 
-    let books = JSON.parse(localStorage.getItem("books")) || [];
-
-    books.push(book);
-
-    localStorage.setItem("books", JSON.stringify(books));
