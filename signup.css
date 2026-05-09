@@ -189,7 +189,7 @@
   color: white;
   cursor: pointer;
   z-index: 2000;
-
+  margin-top: 19px;
  }
 
  .menu-icon:hover{
