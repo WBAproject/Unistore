@@ -430,6 +430,19 @@ items.forEach(function(item) {
     }
 
 });
+    document.addEventListener("click", function(e) {
+
+    if (e.target.classList.contains("add-to-cart")) {
+
+        const productCard = e.target.closest(".product");
+
+        const name = productCard.querySelector("h3").innerText;
+
+        addToCart(name);
+
+    }
+
+});
  </script>
 </body>
 </html>
