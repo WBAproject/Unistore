@@ -432,14 +432,37 @@ items.forEach(function(item) {
 });
     document.addEventListener("click", function(e) {
 
-    if (e.target.classList.contains("add-to-cart")) {
+    if (e.target.tagName === "BUTTON" && e.target.closest(".product-card")) {
 
-        const productCard = e.target.closest(".product");
+        let button = e.target;
 
-        const name = productCard.querySelector("h3").innerText;
+        let isLoggedIn = localStorage.getItem("isLoggedIn");
 
-        addToCart(name);
+        if (isLoggedIn !== "true") {
+            alert("Please log in to add items to your cart.");
+            window.location.href = "login.html";
+            return;
+        }
 
+        let productCard = button.closest(".product-card");
+        let productName = productCard.querySelector("h3").textContent;
+        let productPrice = Number(productCard.querySelector(".price").textContent.replace("Price ", "").replace(" SAR", ""));
+        let productImage = productCard.querySelector("img").src;
+
+        let item = {
+            name: productName,
+            price: productPrice,
+            image: productImage
+        };
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(item);
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        updateCartCount();
+
+        alert(productName + " has been added to your cart.");
+        window.location.href = "cart.html";
     }
 
 });
