@@ -87,19 +87,3 @@ if (menuIcon && sideMenu && overlay) {
             openMenu();
         }
     });
-
-    overlay.addEventListener("click", closeMenu);
-
-} else {
-    console.warn("Navigation Menu elements are missing from this page.");
-}
-
-function openMenu() {
-    sideMenu.style.right = "0px";
-    overlay.style.display = "block";
-}
-
-function closeMenu() {
-    sideMenu.style.right = "-250px";
-    overlay.style.display = "none";
-}
