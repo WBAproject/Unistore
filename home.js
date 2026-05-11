@@ -1,24 +1,7 @@
 
-const menuIcon = document.querySelector(".menu-icon");
-const sideMenu = document.querySelector(".menu-side");
-const overlay = document.querySelector(".overlay");
 const categoryCards = document.querySelectorAll(".category-card");
 const searchInput = document.querySelector(".search-box input");
 const searchButton = document.querySelector(".search-btn");
-
-menuIcon.addEventListener("click",function(){
-if (sideMenu.style.right ==="0px"){
-sideMenu.style.right = "-250px";
-overlay.style.display= "none";}
-else {
-sideMenu.style.right ="0px";
-overlay.style.display= "block";}
-});
-
-
-overlay.addEventListener("click",function(){
-sideMenu.style.right ="-250px";
-overlay.style.display= "none";});
 
 categoryCards.forEach(function(card){
 card.addEventListener("click",function(){
