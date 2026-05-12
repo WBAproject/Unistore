@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>English Book</title>
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+      <!-- Header-->
+         <header class="top-header">
+
+            <div class="header-top" >
+                <a href="index.html" class="logo-box">
+                <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_79143.jpg" alt="Unistore Logo">
+                <h1>Unistore</h1>
+            </a>
+
+            <nav class="navbar" >
+                <a href="cart.html">Cart</a>
+                <a href="index.html">Home</a>
+                <a href="Browse Items.html">Browse Items</a>
+                <a href="add new item-page.html">Sell - Rent </a>
+                <a href="mailto:unistore@gmail.com">Contact Us </a>
+            </nav>
+    </div>
+</header>
+
+
+
+    <main class="details-page">
+
+        <section class="details-card">
+
+            <div class="details-image">
+                <img src="https://files.idyllic.app/files/static/2739665?width=640&optimizer=image" alt="English Book">
+            </div>
+
+            <div class="details-info">
+                <h2>English Book</h2>
+
+                <p class="price">Price: 90 SAR</p>
+
+                <p><strong>Category:</strong> Books</p>
+                <p><strong>Condition:</strong> Used</p>
+                <p class="details-description">This is an English language book with vocabulary lists, reading comprehension exercises, and writing prompts. This is a fantastic tool for both new learners and those who want to strengthen their skills; therefore, this book will help you on your path to learn English.</p>
+
+                <div class="buttons">
+                    <a href="cart.html" class="view-cart-btn">Back</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p> ©️ 2026 Unistore | All Rights Reserved </p>
+        <a href="mailto:unistore@gmail.com"> Contact Us </a>
+    </footer>
+
+    <script>
+
+        function addToCart(productName, productPrice) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            
+            let product = {
+                name: productName,
+                price: productPrice,
+                quantity: 1
+            };
+
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(productName + " has been added to your cart!");
+        }
+
+        let menuIcon = document.querySelector(".menu-icon");
+        let sideMenu = document.querySelector(".menu-side");
+        let overlay = document.querySelector(".overlay");
+        let searchButton = document.querySelector(".search-btn");
+
+        menuIcon.addEventListener("click",function(){
+        if (sideMenu.style.right ==="0px"){
+            sideMenu.style.right = "-250px";
+            overlay.style.display= "none";}
+        else {
+            sideMenu.style.right ="0px";
+            overlay.style.display= "block";}
+     });
+
+        overlay.addEventListener("click",function(){
+            sideMenu.style.right ="-250px";
+            overlay.style.display= "none";});
+;
+    </script>
+</body>
+</html>
