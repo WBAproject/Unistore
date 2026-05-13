@@ -34,12 +34,11 @@ box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .header-top {
-   display: flex;
+   display:flex;
+   justify-content: space-between;
    align-items: center;
-   position: relative;
-   justify-content: center;  
    margin-bottom: 5px;
-   width: 100%;
+   width: 100%;}
 }
 
 .logo-box {
