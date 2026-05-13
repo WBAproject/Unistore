@@ -90,17 +90,3 @@ signupForm.addEventListener('submit', (e) => {
         window.location.href = "Browse Items.html";
     }
 });
-const menuIcon = document.querySelector(".menu-icon");
-const sideMenu = document.querySelector(".menu-side");
-const overlay = document.querySelector(".overlay");
-
-if (menuIcon && sideMenu && overlay) {
-
-    menuIcon.addEventListener("click", function() {
-        if (sideMenu.style.right === "0px") {
-            closeMenu();
-        } else {
-            openMenu();
-        }
-    });
-}
