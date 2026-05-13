@@ -117,12 +117,12 @@ margin: 10px 0;
 font-weight: bold;}
 
 .search-section {
-margin-top: 100px;
+margin-top: 80px;
 display: flex;
 align-items: center;
 gap: 15px;
 margin-bottom: 15px;
-padding: 0 5%;}
+padding: 0 ;}
 
 .search-btn {
 border: none;
