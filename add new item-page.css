@@ -265,3 +265,45 @@ transition: 0.3s;
 .navbar a:hover{
 color: #d6e4ff;
 }
+
+
+
+#user-profile {
+display: none;
+align-items: center;
+gap: 10px;
+background-color: white;
+padding: 5px 20px;
+border-radius: 25px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
+
+#user-profile img {
+width: 35px;
+height: 35px;
+border-radius: 50%;
+object-fit: cover;
+display: block;}
+
+#user-profile span {
+color: #233f99;
+font-weight: bold;
+font-size: 14px;}
+
+.logout-btn {
+background-color: #ff4d4d;
+color: white;
+border: none;
+padding: 5px 10px;
+border-radius: 15px;
+font-size: 12px;
+cursor: pointer;
+margin-left: 10px;
+transition: 0.3s;
+}
+
+.logout-btn:hover {
+background-color: #cc0000;
+transform: scale(1.05);
+}
+
+
