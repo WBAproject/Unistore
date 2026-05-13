@@ -32,15 +32,14 @@ if(event.key === "Enter"){
 searchProducts();}
 });
 
-function checkLoginStatus() {
-const loginBtn = document.getElementById('login-btn');
-const userProfile = document.getElementById('user-profile');
-const isLoggedIn = localStorage.getItem('isLoggedIn');
-
-if (isLoggedIn === 'true') {
-loginBtn.style.display = 'none';
-userProfile.style.display = 'flex';}
-else{
-loginBtn.style.display = 'block';
-userProfile.style.display = 'none';}
-}
+window.addEventListener('DOMContentLoaded', () => {
+const isLoggedIn = localStorage.getItem("isLoggedIn");
+const loginBtn = document.getElementById("login-btn");
+const userIcon = document.getElementById("user-icon-container");
+if (isLoggedIn === "true") {
+if (loginBtn) loginBtn.style.display = "none";
+if (userIcon) userIcon.style.display = "block";} 
+else {
+if (loginBtn) loginBtn.style.display = "block";
+if (userIcon) userIcon.style.display = "none";}
+});
