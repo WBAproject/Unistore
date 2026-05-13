@@ -43,3 +43,12 @@ else {
 if (loginBtn) loginBtn.style.display = "block";
 if (userIcon) userIcon.style.display = "none";}
 });
+
+const logoutBtn = document.getElementById('logout-btn');
+
+if (logoutBtn) {
+logoutBtn.addEventListener('click', function() {
+localStorage.removeItem('isLoggedIn');
+window.location.reload();
+});
+}
