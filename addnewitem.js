@@ -144,3 +144,28 @@ function clearError(id) {
     document.getElementById(id + "error").textContent = "";
 }
 
+
+window.addEventListener('DOMContentLoaded', () => {
+const isLoggedIn = localStorage.getItem("isLoggedIn");
+const loginBtn = document.getElementById("login-btn");
+const userIcon = document.getElementById("user-profile");
+if (isLoggedIn === "true") {
+if (loginBtn) loginBtn.style.display = "none";
+if (userIcon) userIcon.style.display = "flex";}
+else {
+if (loginBtn) loginBtn.style.display = "block";
+if (userIcon) userIcon.style.display = "none";}
+});
+
+const logoutBtn = document.getElementById('logout-btn');
+
+if (logoutBtn) {
+logoutBtn.addEventListener('click', function() {
+localStorage.removeItem('isLoggedIn');
+window.location.reload();
+});
+}
+
+
+
+
