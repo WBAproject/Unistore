@@ -50,7 +50,7 @@ function sendSupport() {
     tickets.push(ticket);
     localStorage.setItem("tickets", JSON.stringify(tickets));
 
-    alert("Saved successfully");
+    alert("Saved successfully\n\n we will contact you soon\n for more inquiries please contact:0509797317");
     console.log(tickets);
 
     document.getElementById("supportForm").reset();
