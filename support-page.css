@@ -146,11 +146,7 @@ span {
     align-items: center;
 }
 
-.right-side {
-    display: flex;
-    align-items: center;
-    margin-left: 10px; 
-}
+
 
 .top-header {
     border-radius: 10px;
