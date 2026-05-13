@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+ <!-- Header-->
+        <header class="top-header">
+
+        <div class="header-top">
+
+            <a href="index.html" class="logo-box">
+            <img src="https://png.pngtree.com/template/20190316/ourmid/pngtree-books-logo-image_79143.jpg" alt="Unistore Logo">
+            <h1>Unistore</h1>
+            </a>
+
+    <nav class="navbar">
+        <a href="index.html">HOME</a>
+        <a href="Browse Items.html">Browse Items</a>
+        <a href="cart.html">Cart</a>
+        <a href="add new item-page.html">Sell - Rent</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:unistore@gmail.com">Contact Us | EMAIL</a>
+    </nav>
+
+        <div class="login-box" id="auth-container">
+
+            <a href="login.html" id="login-btn" class="login-btn">
+                login / sign Up
+            </a>
+
+        <div id="user-profile">
+            <span>Welcome!</span>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJZ5Jv_tCYyoloVKtYTLbvqs_k_cKw-jJczg&s" alt="User Profile">
+
+            <button id="logout-btn" class="logout-btn">
+                Logout
+            </button>
+
+        </div>
+    </div>
+
+</div>
+
+</header>
+
+<main class="details-page">
+    <section class="details-card">
+
+        <div class="details-image">
+            <img id="productImage" src="" alt="Product Image">
+        </div>
+
+        <div class="details-info">
+            <h2 id="productName"></h2>
+
+            <p class="price" id="productPrice"></p>
+
+            <p><strong>Category:</strong> <span id="productCategory"></span></p>
+            <p><strong>Condition:</strong> <span id="productCondition"></span></p>
+            <p><strong>Type:</strong> <span id="productType"></span></p>
+            <p><strong>Contact:</strong> <span id="productContact"></span></p>
+
+            <p class="details-description" id="productDescription"></p>
+
+            <div class="buttons">
+                <a href="cart.html">Back</a>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<footer class="footer">
+    <p>©️ 2026 Unistore | All Rights Reserved</p>
+    <a href="mailto:unistore@gmail.com">Contact Us</a>
+</footer>
+
+<script>
+
+let fixedProducts = {
+
+    calculator: {
+        name: "Calculator",
+        price: 30,
+        category: "Study Tools",
+        condition: "Used",
+        type: "Sell",
+        contact: "0553647511",
+        description: "You can depend on this calculator for all of your calculations!",
+        image: "https://m.media-amazon.com/images/I/71ZzZef+TiL._AC_SX679_.jpg"
+    },
+
+    headphones: {
+        name: "Headphones",
+        price: 120,
+        category: "Electronics",
+        condition: "Used",
+        type: "Sell",
+        contact: "0554548820",
+        description: "Headphones used to enable students to listen to lectures with noise cancellation.",
+        image: "https://www.photomaticai.com/images/processed/ai-generated-images/models_imagen-3_ai-image-generator_product-photogr_Minimalist_Wireless_Headphone_Product_Photography.webp"
+    },
+
+    englishbook: {
+        name: "English Book",
+        price: 90,
+        category: "Books",
+        condition: "Used",
+        type: "Sell",
+        contact: "0570983072",
+        description: "This is an English language book with vocabulary lists, reading comprehension exercises, and writing prompts. This book helps students improve their English skills.",
+        image: "https://files.idyllic.app/files/static/2739665?width=640&optimizer=image"
+    },
+
+    usedlap: {
+        name: "Used Laptop",
+        price: 1300,
+        category: "Electronics",
+        condition: "Used",
+        type: "Sell",
+        contact: "0509797317",
+        description: "A used laptop that helps with studying and storing materials and notes.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIYfSbqmxH1Vs_Gbkmbnkh3mV0mTu_Eh5wfg&s"
+    },
+
+    usedipad: {
+        name: "Used iPad",
+        price: 850,
+        category: "Electronics",
+        condition: "Used",
+        type: "Sell",
+        contact: "0553647511",
+        description: "A used iPad that helps with studying and storing materials and notes.",
+        image: "https://fonezone.me/cdn/shop/products/ipad7silver_0db45d6e-a91d-40ed-a936-d0eba26bf51d.jpg?v=1701340787&width=493"
+    },
+
+    stapler: {
+        name: "Stapler",
+        price: 12,
+        category: "Study Tools",
+        condition: "Used",
+        type: "Sell",
+        contact: "0554548820",
+        description: "A stapler that meets your needs at an affordable price!",
+        image: "https://media.accobrands.com/media/560-560/15779.jpg?width=560px&height=560px"
+    },
+
+    penset: {
+        name: "Pen Set",
+        price: 10,
+        category: "Study Tools",
+        condition: "Used",
+        type: "Sell",
+        contact: "0570983072",
+        description: "A set of pens for all your writing needs!",
+        image: "https://m.media-amazon.com/images/I/61kcAYfgMfL._AC_SX679_.jpg"
+    },
+
+    physicsbook: {
+        name: "Physics Book",
+        price: 80,
+        category: "Books",
+        condition: "Used",
+        type: "Sell",
+        contact: "0509797317",
+        description: "The book explains basic physics rules and principles in a simple way with examples and exercises.",
+        image: "https://files.idyllic.app/files/static/3335710?width=640&optimizer=image"
+    },
+
+    programmingbook: {
+        name: "Programming Book",
+        price: 95,
+        category: "Books",
+        condition: "Used",
+        type: "Sell",
+        contact: "0553647511",
+        description: "This book helps students learn basic programming concepts through clear examples and explanations.",
+        image: "https://content.packt.com/_/image/original/B09606/cover_image.jpg?version=1771981135"
+    }
+
+};
+
+let selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
+
+let nameToId = {
+    "Calculator": "calculator",
+    "Headphones": "headphones",
+    "English Book": "englishbook",
+    "Used Laptop": "usedlap",
+    "Used iPad": "usedipad",
+    "Stapler": "stapler",
+    "Pen Set": "penset",
+    "Pen set": "penset",
+    "Physics Book": "physicsbook",
+    "Programming Book": "programmingbook"
+};
+
+if (selectedProduct) {
+
+    let productName = selectedProduct.name.trim();
+
+    let productId = nameToId[productName];
+
+    if (productId && fixedProducts[productId]) {
+
+        selectedProduct = {
+            ...selectedProduct,
+            ...fixedProducts[productId]
+        };
+    }
+
+} else {
+
+    let urlParams = new URLSearchParams(window.location.search);
+
+    let productId = urlParams.get("id");
+
+    selectedProduct = fixedProducts[productId];
+}
+
+if (selectedProduct) {
+
+    document.getElementById("productImage").src =
+        selectedProduct.image || "https://cdn-icons-png.flaticon.com/512/679/679922.png";
+
+    document.getElementById("productImage").alt =
+        selectedProduct.name;
+
+    document.getElementById("productName").textContent =
+        selectedProduct.name;
+
+    document.getElementById("productPrice").textContent =
+        selectedProduct.price + " SAR";
+
+    document.getElementById("productCategory").textContent =
+        selectedProduct.category || "Not available";
+
+    document.getElementById("productCondition").textContent =
+        selectedProduct.condition || "Used";
+
+    document.getElementById("productType").textContent =
+        selectedProduct.type || "Sell";
+
+    document.getElementById("productContact").textContent =
+        selectedProduct.contact || selectedProduct.phone || "Not available";
+
+    document.getElementById("productDescription").textContent =
+        selectedProduct.description || "No description available.";
+
+} else {
+
+    document.querySelector(".details-card").innerHTML =
+        "<h2>Product not found</h2>";
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+const isLoggedIn = localStorage.getItem("isLoggedIn");
+const loginBtn = document.getElementById("login-btn");
+const userIcon = document.getElementById("user-profile");
+if (isLoggedIn === "true") {
+if (loginBtn) loginBtn.style.display = "none";
+if (userIcon) userIcon.style.display = "flex";}
+else {
+if (loginBtn) loginBtn.style.display = "block";
+if (userIcon) userIcon.style.display = "none";}
+});
+
+const logoutBtn = document.getElementById('logout-btn');
+
+if (logoutBtn) {
+logoutBtn.addEventListener('click', function() {
+localStorage.removeItem('isLoggedIn');
+window.location.reload();
+});
+}
+
+</script>
+
+</body>
+</html>
