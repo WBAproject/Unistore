@@ -17,7 +17,8 @@ body {
 }
 
 .page-container {
-    width: 1500px;
+    width: 100%;
+    margin: 0;
     max-width: 1500px;
     margin: 15px auto;
     background-color: #f5f5f5;
