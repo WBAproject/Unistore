@@ -182,6 +182,7 @@ body {
 /* Search */
 
 .search-section {
+    margin-top: 100px;
     display: flex;
     gap: 10px;
     margin-bottom: 8px;
