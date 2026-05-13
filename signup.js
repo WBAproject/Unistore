@@ -103,3 +103,4 @@ if (menuIcon && sideMenu && overlay) {
             openMenu();
         }
     });
+}
