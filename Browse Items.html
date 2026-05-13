@@ -626,6 +626,7 @@ const logoutBtn = document.getElementById('logout-btn');
 if (logoutBtn) {
 logoutBtn.addEventListener('click', function() {
 localStorage.removeItem('isLoggedIn');
+localStorage.removeItem('cart');
 window.location.reload();
 });
 }
