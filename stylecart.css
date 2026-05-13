@@ -11,13 +11,7 @@ body {
     background-color: #efefef;
 }
 
-.page-container {
-    width: 1500px;
-    max-width: 1500px;
-    margin: 30px auto;
-    background-color: #f5f5f5;
-    padding: 20px;
-}
+
 
 /* Header */
 .top-header {
