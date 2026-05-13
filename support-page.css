@@ -186,6 +186,23 @@ span {
     color: white;
     font-size: 18px;
 }
+
+.login-btn{
+background-color: white;
+color:#233f99;
+text-decoration: none;
+font-size: 14px;
+font-weight: bold;
+padding: 10px 18px;
+border-radius: 22px;
+border: 2px solid white;
+}
+
+.login-btn:hover{
+background-color: transparent;
+color: white;
+}
+
 .navbar{
 display: flex;
 align-items: center;
