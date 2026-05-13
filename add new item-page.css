@@ -247,3 +247,21 @@ border: 2px solid white;
 background-color: transparent;
 color: white;
 }
+
+.navbar{
+display: flex;
+align-items: center;
+gap: 25px;
+}
+
+.navbar a{
+text-decoration: none;
+color: white;
+font-size: 15px;
+font-weight: bold;
+transition: 0.3s;
+}
+
+.navbar a:hover{
+color: #d6e4ff;
+}
